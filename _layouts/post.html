@@ -17,6 +17,15 @@ layout: default
       {%- endif -%}</p>
   </header>
 
+  <div class="tag-cloud flex-container left">
+    {% for tag in page.tags %}
+    {% capture tagname %}{{ tag }}{% endcapture %}
+    <a class="tag-link" href="/tag/{{ tagname }}">
+      <div class="tag no-sibling">{{ tagname }}</div>
+    </a>
+    {% endfor %}
+  </div>
+
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
@@ -27,12 +36,3 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
-
-<div class="flex-container left">
-  {% for tag in page.tags %}
-    {% capture tagname %}{{ tag }}{% endcapture %}
-    <a class="tag-link" href="/tag/{{ tagname }}">
-      <div class="tag no-sibling">{{ tagname }}</div>
-    </a>
-  {% endfor %}
-</div>

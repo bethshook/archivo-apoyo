@@ -4,6 +4,7 @@
 .flex-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 
   &.left {
@@ -21,9 +22,8 @@
 .site-header {
   min-height: $spacing-unit * 1.865;
   background-color: $brand-darkgreen;
-
-  // Positioning context for the mobile navigation icon
-  position: relative;
+  position: fixed;
+  width: 100%;
 }
 
 .site-title {
@@ -124,7 +124,7 @@
  * Tag cloud
  */
 .tag-cloud {
-  margin: $spacing-unit 0;
+  margin: $spacing-unit / 2 0 $spacing-unit 0;
 }
 
 /**
@@ -202,7 +202,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: $spacing-unit * 3 0 $spacing-unit 0;
   flex: 1;
 }
 
@@ -215,7 +215,7 @@
 }
 
 .post-list {
-  margin: 0 auto;
+  margin: 0 auto $spacing-unit * 1.5 auto;
   list-style: none;
 
   > .post-item {
@@ -254,7 +254,7 @@
  * Posts
  */
 .post-header {
-  margin-bottom: $spacing-unit;
+  margin-bottom: $spacing-unit / 2;
 }
 
 .post-title {
@@ -292,7 +292,7 @@
     }
 
     &:hover {
-      background-size: 0 0;
+      background-size: 0 .6em;
 
       &::before {
         opacity: 1;

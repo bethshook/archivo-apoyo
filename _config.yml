@@ -31,9 +31,12 @@ github_username:  bethshook
 
 # Build settings
 theme: minima
+paginate: 5
+paginate_path: /page:num/
 plugins:
   - jekyll-feed
   - jekyll-compose
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default.
