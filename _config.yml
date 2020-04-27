@@ -18,8 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: archivo de apoyo cdmx
-email: beth.shook@gmail.com
+title: Archivo de Apoyo CDMX
+author: Beth Shook
+email: beth@archivodeapoyo.com
 description: >- # this means to ignore newlines until "baseurl:"
   An archive of aid projects and creative responses to the COVID-19
   crisis in Mexico City.
@@ -32,6 +33,7 @@ github_username:  bethshook
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-compose
 
 # Exclude from processing.
 # The following items will not be processed, by default.

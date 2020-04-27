@@ -3,8 +3,16 @@ layout: default
 ---
 
 {% assign tagname = page.title | replace:' ','-' %}
+{% assign numtags = 0 %}
+{% for post in site.posts %}
+    {% if post.tags contains tagname %}
+        {% assign numtags = numtags | plus:1 %}
+    {% endif %}
+{% endfor %}
 
-<p>{{ tagname }}</p>
+<a class="tag-link static" href="/tag/{{ tagname }}">
+    <div class="tag">{{ tagname }}</div><div class="number">{{numtags}}</div>
+</a>
 
 <ul>
     {% for post in site.posts %}

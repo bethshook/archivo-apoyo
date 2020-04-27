@@ -8,8 +8,6 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
@@ -33,10 +31,16 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+h1, h2, h3, h4,
 %vertical-rhythm {
+  font-family: $secondary-font-family;
+  margin-bottom: $spacing-unit / 2;
+}
+
+h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure {
+  font-family: $base-font-family;
   margin-bottom: $spacing-unit / 2;
 }
 
@@ -104,26 +108,98 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
   color: $brand-color;
+  display: inline;
   text-decoration: none;
-
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
+  background-image: linear-gradient(90deg, $highlight, $highlight);
+  background-size: 0 .6em;
+  transition: all .3s ease-out;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0 .6em;
 
   &:hover {
-    color: $text-color;
-    text-decoration: underline;
+    background-size: 100% .6em;
+  }
+
+  &.page-link {
+    background-image: linear-gradient(90deg, $brand-green, $brand-green);
+  }
+
+  &.tag-link {
+    font-family: $secondary-font-family;
+    color: $white;
+    margin: .5em;
+    transition: all .3s;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+
+    div {
+      padding: .5em .75em;
+    }
+
+    .tag {
+      background-color: $brand-darkgreen;
+      border-top-left-radius: .25em;
+      border-bottom-left-radius: .25em;
+
+      &.no-sibling {
+        border-radius: .25em;
+      }
+    }
+
+    .number {
+      color: $brand-darkgreen;
+      border-top-right-radius: .25em;
+      border-bottom-right-radius: .25em;
+      background-color: $brand-green;
+      line-height: 1;
+    }
+
+    &:hover {
+      background-size: 0 0;
+    }
+
+    &:not(.static):hover {
+      transform: scale(.95)
+    }
   }
 
   .social-media-list &:hover {
     text-decoration: none;
-
-    .username {
-      text-decoration: underline;
-    }
   }
 }
 
+/**
+ * Buttons
+ */
+button, .button {
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  font-size: $base-font-size;
+  border: none;
+  background-color: $brand-green;
+  border-radius: .25rem;
+  padding: 0;
+  color: $white;
+  -webkit-text-fill-color: initial;
+  cursor: pointer;
+  display: flex;
+  transition: all .3s ease-out;
+
+  span {
+    padding: .75em;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    transform: scale(.95);
+    background-size: 0;
+  }
+}
 
 /**
  * Blockquotes
@@ -207,6 +283,10 @@ pre {
 /**
  * Icons
  */
+
+.fas {
+  margin-right: .5em;
+}
 
 .svg-icon {
     width: 16px;
