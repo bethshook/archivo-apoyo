@@ -1,24 +1,11 @@
 <div class="post-list">
     {%- for post in site.posts -%}
     <div class="post-item">
+
         <div class="post-meta">
-            {% assign month = post.date | date: "%-m" %}
-            {{ post.date | date: "%-d" }}
-            {% case month %}
-            {% when '1' %}enero
-            {% when '2' %}febrero
-            {% when '3' %}marzo
-            {% when '4' %}abril
-            {% when '5' %}mayo
-            {% when '6' %}junio
-            {% when '7' %}julio
-            {% when '8' %}agosto
-            {% when '9' %}septiembre
-            {% when '10' %}octubre
-            {% when '11' %}noviembre
-            {% when '12' %}diciembre
-            {% endcase %}
-            {{ post.date | date: "%Y" }}</div>
+            {% include post-date.html %}
+        </div>
+
         <div>
             <a class="post-link" href="{{ post.url | relative_url }}">
                 {{ post.title | escape }}

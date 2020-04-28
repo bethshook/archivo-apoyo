@@ -122,10 +122,11 @@ a {
   }
 
   &.page-link {
-    transition: none;
+    //transition: none;
 
     &:hover {
-      text-decoration: underline;
+      //text-decoration: underline;
+      color: white;
       background-size: 0 0;
     }
   }

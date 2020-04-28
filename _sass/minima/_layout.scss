@@ -24,6 +24,7 @@
   background-color: $brand-darkgreen;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 .site-title {
@@ -285,6 +286,7 @@
   @include relative-font-size(2);
   letter-spacing: -1px;
   line-height: 1;
+  text-transform: lowercase;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
@@ -298,25 +300,28 @@
   a {
     position: relative;
     background-size: 100% .6em;
-    background-image: linear-gradient(90deg, $highlight, $highlight);
+    text-decoration: underline;
+    background: none;
+    //background-image: linear-gradient(90deg, $highlight, $highlight);
 
     &::before {
-      position: absolute;
-      content: "";
-      top: .6em;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-image: linear-gradient(90deg, $brand-green, $brand-green);
-      background-size: 100% .6em;
-      background-position: 0 .6em;
-      z-index: -1;
-      transition: opacity 0.5s linear;
-      opacity: 0;
+      //position: absolute;
+      //content: "";
+      //top: .6em;
+      //right: 0;
+      //bottom: 0;
+      //left: 0;
+      //background-image: linear-gradient(90deg, $white, $white);
+      //background-size: 100% .6em;
+      //background-position: 0 .6em;
+      //z-index: -1;
+      //transition: opacity 0.5s linear;
+      //opacity: 0;
     }
 
     &:hover {
-      background-size: 0 .6em;
+      //background-size: 0 .6em;
+      text-decoration: none;
 
       &::before {
         opacity: 1;
