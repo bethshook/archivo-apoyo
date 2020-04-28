@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Cupones para apoyar a los trajineros
+translation: Coupons to support the trajineros
 date: 2020-04-26 23:26 -0500
-tags: apoyo-mutuo cupones comprar
+tags: apoyo-mutuo cupones comprar cdmx
 ---
 
 Para comprar tu cupón, manda un DM a [@youngzokeziah](https://www.instagram.com/youngzokeziah/) en Instagram.

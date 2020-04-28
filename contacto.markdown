@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Contacto
+permalink: /contacto/
 ---
 
 Este blog está dedicado a proyectos de apoyo y respuestas creativas al crisis de COVID-19 en la Ciudad de México.

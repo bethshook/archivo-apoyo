@@ -1,22 +1,5 @@
----
-layout: default
----
-
-{% assign tagname = page.title | replace:' ','-' %}
-{% assign numtags = 0 %}
-{% for post in site.posts %}
-    {% if post.tags contains tagname %}
-        {% assign numtags = numtags | plus:1 %}
-    {% endif %}
-{% endfor %}
-
-<span class="page-title">
-    Posts tagged with <span class="tag-title">{{ tagname }} ({{ numtags }})</span>
-</span>
-
 <div class="post-list">
     {%- for post in site.posts -%}
-    {% if post.tags contains tagname %}
     <div class="post-item">
         <div class="post-meta">
             {% assign month = post.date | date: "%-m" %}
@@ -46,7 +29,5 @@ layout: default
         {{ post.excerpt }}
         {%- endif -%}
     </div>
-    {% endif %}
     {%- endfor -%}
 </div>
-

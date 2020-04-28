@@ -111,21 +111,27 @@ a {
   display: inline;
   text-decoration: none;
   background-image: linear-gradient(90deg, $highlight, $highlight);
-  background-size: 0 .6em;
+  background-size: 0 .5em;
   transition: all .3s ease-out;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: 0 .6em;
+  background-position: 0 .7em;
 
   &:hover {
-    background-size: 100% .6em;
+    background-size: 100% .5em;
   }
 
-  &.page-link:hover {
-    background-size: 0 0;
+  &.page-link {
+    transition: none;
+
+    &:hover {
+      text-decoration: underline;
+      background-size: 0 0;
+    }
   }
 
   &.tag-link {
+    font-size: $base-font-size;
     font-family: $secondary-font-family;
     color: $white;
     margin: .5em;
@@ -164,7 +170,7 @@ a {
       background-size: 0 0;
     }
 
-    &:not(.static):hover {
+    &:hover {
       transform: scale(.95)
     }
   }
