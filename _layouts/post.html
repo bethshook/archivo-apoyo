@@ -7,6 +7,7 @@ layout: default
     <a href="{{post.url}}">
       <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     </a>
+
     <p class="post-meta">
 
       {% assign month = page.date | date: "%-m" %}
@@ -43,6 +44,31 @@ layout: default
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
+
+    {%- if page.ext_url -%}
+
+    <a href="{{page.ext_url}}" target="_blank">
+
+      {%- endif -%}
+
+      {%- if page.ext_url -%}
+
+        Detalles aquí.
+
+      {%- endif -%}
+
+      <div class="image-wrapper">
+
+        <img src="{{page.image}}" title="{{post.title}}" alt="{{post.title}}" />
+
+      </div>
+
+    {%- if page.ext_url -%}
+
+    </a>
+
+    {%- endif -%}
+
   </div>
 
   {%- if site.disqus.shortname -%}
@@ -50,4 +76,5 @@ layout: default
   {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+
 </article>
