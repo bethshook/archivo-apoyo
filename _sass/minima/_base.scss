@@ -125,8 +125,7 @@ a {
     //transition: none;
 
     &:hover {
-      //text-decoration: underline;
-      color: white;
+      text-decoration: underline;
       background-size: 0 0;
     }
   }
@@ -179,6 +178,10 @@ a {
   .social-media-list &:hover {
     text-decoration: none;
   }
+}
+
+.link--no-underline:hover {
+  background-size: 0 0;
 }
 
 /**

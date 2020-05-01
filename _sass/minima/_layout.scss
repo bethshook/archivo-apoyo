@@ -11,6 +11,12 @@
     justify-content: start;
   }
 
+  &.post-item {
+    flex-wrap: nowrap;
+    align-items: start;
+    justify-content: flex-start;
+  }
+
   @include media-query($on-palm) {
     justify-content: start;
   }
@@ -143,7 +149,7 @@
  * Tag cloud
  */
 .tag-cloud {
-  margin: $spacing-unit / 2 0 $spacing-unit 0;
+  margin: $spacing-unit 0;
 }
 
 /**
@@ -234,7 +240,7 @@
 }
 
 .post-list {
-  margin: 0 auto $spacing-unit * 1.5 auto;
+  margin: 0 auto $spacing-unit * 2.5 auto;
   list-style: none;
 
   > .post-item {
@@ -245,7 +251,7 @@
     }
 
     > div {
-      flex: 1;
+      //flex: 1;
     }
 
     .translation {
@@ -279,6 +285,7 @@
  * Posts
  */
 .post-header {
+  padding-top: $spacing-unit;
   margin-bottom: $spacing-unit / 2;
 }
 
@@ -297,31 +304,17 @@
   margin-bottom: $spacing-unit;
   font-family: $base-font-family;
 
-  a {
+  a, .standard-link {
     position: relative;
     background-size: 100% .6em;
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: 1px $brand-color solid;
     background: none;
-    //background-image: linear-gradient(90deg, $highlight, $highlight);
-
-    &::before {
-      //position: absolute;
-      //content: "";
-      //top: .6em;
-      //right: 0;
-      //bottom: 0;
-      //left: 0;
-      //background-image: linear-gradient(90deg, $white, $white);
-      //background-size: 100% .6em;
-      //background-position: 0 .6em;
-      //z-index: -1;
-      //transition: opacity 0.5s linear;
-      //opacity: 0;
-    }
+    transition: none;
 
     &:hover {
-      //background-size: 0 .6em;
-      text-decoration: none;
+      color: $grey-color;
+      border-color: $grey-color;
 
       &::before {
         opacity: 1;
@@ -351,5 +344,19 @@
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
     }
+  }
+}
+
+.image-wrapper {
+  margin-top: $spacing-unit;
+  width: 66%;
+
+  &--thumbnail {
+    margin-top: 0;
+    margin-right: $spacing-unit * 2;
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
   }
 }

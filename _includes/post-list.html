@@ -1,20 +1,27 @@
 <div class="post-list">
     {%- for post in site.posts -%}
-    <div class="post-item">
+    <div class="post-item flex-container">
 
-        <div class="post-meta">
-            {% include post-date.html %}
-        </div>
+        <a class="link--no-underline" href="{{ post.url | relative_url }}">
+            <div class="image-wrapper--thumbnail" style="background-image: url('{{ post.image }}')">
+            </div>
+        </a>
 
-        <div>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-            </a>
-            <p class="translation">{{ post.translation }}</p>
-        </div>
-        {%- if site.show_excerpts -%}
-        {{ post.excerpt }}
-        {%- endif -%}
+            <div>
+
+                <div class="post-meta">
+                    {% include post-date.html %}
+                </div>
+
+                <div>
+                    <a class="post-link" href="{{ post.url | relative_url }}">
+                        {{ post.title | escape }}
+                    </a>
+                    <p class="translation">{{ post.translation }}</p>
+                </div>
+
+            </div>
+
     </div>
     {%- endfor -%}
 </div>
