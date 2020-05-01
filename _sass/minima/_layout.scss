@@ -15,6 +15,12 @@
     flex-wrap: nowrap;
     align-items: start;
     justify-content: flex-start;
+
+    @include media-query($on-palm) {
+      a {
+        width: 100%;
+      }
+    }
   }
 
   @include media-query($on-palm) {
@@ -132,7 +138,6 @@
   font-weight: 400;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
-  float: left;
   text-transform: lowercase;
   margin-bottom: $spacing-unit;
 
@@ -227,7 +232,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit * 3 0 $spacing-unit 0;
+  padding: $spacing-unit * 3 0 $spacing-unit * 2 0;
   flex: 1;
 }
 
@@ -348,15 +353,26 @@
 }
 
 .image-wrapper {
-  margin-top: $spacing-unit;
   width: 66%;
+  margin: $spacing-unit auto;
 
   &--thumbnail {
-    margin-top: 0;
-    margin-right: $spacing-unit * 2;
+    margin: 0 $spacing-unit * 2 0 0;
     width: 120px;
     height: 120px;
     background-size: cover;
     background-position: center;
+
+    @include media-query($on-palm) {
+      width: 100%;
+      height: 120px;
+    }
+
+  }
+}
+
+.desktop-only {
+  @include media-query($on-palm) {
+    display: none;
   }
 }

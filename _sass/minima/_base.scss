@@ -92,96 +92,11 @@ li {
   }
 }
 
-
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
-}
-
-
-
-/**
- * Links
- */
-a {
-  color: $brand-color;
-  display: inline;
-  text-decoration: none;
-  background-image: linear-gradient(90deg, $highlight, $highlight);
-  background-size: 0 .5em;
-  transition: all .3s ease-out;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: 0 .7em;
-
-  &:hover {
-    background-size: 100% .5em;
-  }
-
-  &.page-link {
-    //transition: none;
-
-    &:hover {
-      text-decoration: underline;
-      background-size: 0 0;
-    }
-  }
-
-  &.tag-link {
-    font-size: $base-font-size;
-    font-family: $secondary-font-family;
-    color: $white;
-    margin: .5em;
-    transition: all .3s;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-
-    &:first-child {
-      margin-left: 0;
-    }
-
-    div {
-      padding: .5em .75em;
-    }
-
-    .tag {
-      background-color: $brand-darkgreen;
-      border-top-left-radius: .25em;
-      border-bottom-left-radius: .25em;
-
-      &.no-sibling {
-        border-radius: .25em;
-      }
-    }
-
-    .number {
-      color: $brand-darkgreen;
-      border-top-right-radius: .25em;
-      border-bottom-right-radius: .25em;
-      background-color: $brand-green;
-      line-height: 1;
-    }
-
-    &:hover {
-      background-size: 0 0;
-    }
-
-    &:hover {
-      transform: scale(.95)
-    }
-  }
-
-  .social-media-list &:hover {
-    text-decoration: none;
-  }
-}
-
-.link--no-underline:hover {
-  background-size: 0 0;
 }
 
 /**
@@ -230,8 +145,6 @@ blockquote {
     margin-bottom: 0;
   }
 }
-
-
 
 /**
  * Code formatting
@@ -295,7 +208,7 @@ pre {
 
 
 /**
- * Icons
+ * Icons and emojis
  */
 
 .fas {
@@ -315,6 +228,11 @@ pre {
   li + li {
     padding-top: 5px;
   }
+}
+
+.emoji {
+  margin-bottom: .5em;
+  margin-left: .25em;
 }
 
 
@@ -356,6 +274,5 @@ hr {
   border-color: $brand-darkgreen;
   border-style: solid;
   width: 50%;
-  margin: 0 auto;
-  margin-bottom: $spacing-unit / 2;
+  margin: $spacing-unit auto;
 }

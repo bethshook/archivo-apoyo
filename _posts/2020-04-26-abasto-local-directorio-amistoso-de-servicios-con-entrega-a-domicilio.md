@@ -3,9 +3,10 @@ layout: post
 title: 'Abasto Local: Directorio amistoso de servicios con entrega a domicilio'
 translation: 'Abasto Local: A friendly directory of delivery services'
 image: '/assets/images/abastolocal.png'
+emoji: ':card_index:'
 ext_url: 'https://abastolocal.com/'
 date: 2020-04-26 23:16 -0500
-tags: abasto restaurantes comida consume-local comprar cdmx
+tags: abasto restaurantes comida consume-local comprar proyectos-activos
 ---
 
 Un directorio digital que ofrece un montón de comercios enfocados en comida y bebida. Puedes filtrar la guía según el tipo de producto y la zona de la ciudad. Para cada comercio tienen una descripción del servicio e información de contacto. 
