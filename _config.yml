@@ -32,6 +32,10 @@ twitter:
   card: summary
 github_username:  bethshook
 lang: es_MX
+readme_index:
+  enabled:          true
+  remove_originals: false
+  with_frontmatter: false
 
 # Build settings
 theme: minima
