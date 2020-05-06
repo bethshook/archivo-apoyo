@@ -107,7 +107,7 @@ button, .button {
   font-weight: $base-font-weight;
   font-size: $base-font-size;
   border: none;
-  background-color: $brand-green;
+  background-color: $brand-light;
   border-radius: .25rem;
   padding: 0;
   color: $white;
@@ -213,6 +213,7 @@ pre {
 
 .fas {
   margin-right: .5em;
+  transition: all .3s ease-out;
 }
 
 .svg-icon {
@@ -270,8 +271,8 @@ table {
  */
 
 hr {
-  background-color: $brand-darkgreen;
-  border-color: $brand-darkgreen;
+  background-color: $brand-dark;
+  border-color: $brand-dark;
   border-style: solid;
   width: 50%;
   margin: $spacing-unit auto;

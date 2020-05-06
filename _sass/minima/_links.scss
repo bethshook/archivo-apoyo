@@ -1,9 +1,7 @@
 /**
  * Links
  */
-a,
-a.link--fancy,
-.post-content a.link--fancy {
+a {
   color: $brand-color;
   display: inline;
   text-decoration: none;
@@ -18,15 +16,27 @@ a.link--fancy,
   &:hover {
     background-size: 100% .5em;
     border-bottom: none;
-    color: initial;
+  }
+
+  &.link--return {
+    margin-top: $spacing-unit;
+    color: $brand-darker;
+    font-size: 1.2em;
+
+    &:hover {
+      background-size: 0;
+
+      .fas {
+        transform: translateX(-10px);
+      }
+    }
   }
 
   &.page-link {
-    border-bottom: 1px $brand-color solid;
     transition: none;
+    font-family: $secondary-font-family;
 
     &:hover {
-      color: $white;
       border-bottom: 1px $white solid;
       background-size: 0 0;
     }
@@ -41,26 +51,41 @@ a.link--fancy,
     line-height: 1;
     display: flex;
     align-items: center;
+    border-bottom: 0;
 
     div {
       padding: .5em .75em;
     }
 
     .tag {
-      background-color: $brand-darkgreen;
+      background-color: $brand-darker;
       border-top-left-radius: .25em;
       border-bottom-left-radius: .25em;
+      border: 1px $brand-darker solid;
+      box-sizing: border-box;
+      border-right: none;
+
+      &--return {
+        background-color: $brand-dark;
+
+        &:hover {
+          transform: none;
+        }
+      }
 
       &.no-sibling {
         border-radius: .25em;
+        border: none;
       }
     }
 
     .number {
-      color: $brand-darkgreen;
+      color: $brand-darker;
+      border: 1px $brand-darker solid;
+      border-left: none;
       border-top-right-radius: .25em;
       border-bottom-right-radius: .25em;
-      background-color: $brand-green;
+      background-color: $white;
       line-height: 1;
     }
 
@@ -72,12 +97,30 @@ a.link--fancy,
       transform: scale(.95)
     }
   }
-
-  .social-media-list &:hover {
-    text-decoration: none;
-  }
 }
 
 .link--no-underline:hover {
   background-size: 0 0;
+}
+
+.post-content a {
+  font-weight: 700;
+}
+
+.post-link {
+  display: inline;
+  font-size: $base-font-size * 1.25;
+  font-weight: 700;
+
+  @include media-query($on-palm) {
+    line-height: 1.2;
+    font-size: $base-font-size * 1.1;
+  }
+}
+
+.post-link-wrapper {
+  @include media-query($on-palm) {
+    margin: $spacing-unit / 2 0;
+    padding: 0 $spacing-unit / 2;
+  }
 }

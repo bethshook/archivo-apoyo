@@ -4,8 +4,11 @@ title: Home
 ---
 
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- if page.vis_title -%}
+  <div class="page-heading--visual">
+    <h1>{{ page.vis_title }}</h1>
+    <p>{{ page.vis_subtitle }}</p>
+  </div>
   {%- endif -%}
 
   {{ content }}

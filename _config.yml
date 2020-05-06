@@ -19,6 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Archivo de Apoyo CDMX
+tagline: Un repositorio de proyectos de apoyo y respuestas creativas al crisis de covid-19
 author: Beth Shook
 email: beth@archivodeapoyo.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -26,8 +27,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   crisis in Mexico City.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: bethshook
+twitter:
+  username: bethshook
+  card: summary
 github_username:  bethshook
+lang: es_MX
 
 # Build settings
 theme: minima
@@ -38,6 +42,7 @@ plugins:
   - jekyll-compose
   - jekyll-paginate
   - jemoji
+  - jekyll-seo
 
 # Exclude from processing.
 # The following items will not be processed, by default.
