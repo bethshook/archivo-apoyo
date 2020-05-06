@@ -2,7 +2,7 @@
 layout: post
 title: 'CuidArte: Una venta de arte para proteger a nuestrxs enfermerxs'
 translation: 'CuidArte: An art sale to help protect our nurses'
-image: '/assets/images/cuidarte.png'
+image: 'assets/images/cuidarte.png'
 emoji: ':art:'
 ext_url: 'https://instagram.com/cuidarte_cdmx'
 date: 2020-04-27 19:27 -0500

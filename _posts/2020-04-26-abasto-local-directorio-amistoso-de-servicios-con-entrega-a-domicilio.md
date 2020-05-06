@@ -2,7 +2,7 @@
 layout: post
 title: 'Abasto Local: Directorio amistoso de servicios con entrega a domicilio'
 translation: 'Abasto Local: Your friendly delivery service directory'
-image: '/assets/images/abastolocal.png'
+image: 'assets/images/abastolocal.png'
 emoji: ':card_index:'
 ext_url: 'https://abastolocal.com/'
 date: 2020-04-26 23:16 -0500
