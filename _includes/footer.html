@@ -16,7 +16,7 @@
         <ul class="contact-list">
           <li class="p-name">
             {%- if site.author -%}
-            Project by <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}">{{ site.author | escape }}</a>
+            Project by<a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"> {{ site.author | escape }}</a>
             {%- else -%}
               {{ site.title | escape }}
             {%- endif -%}
@@ -25,10 +25,12 @@
       </div>
 
       <div class="footer-col footer-col-2">
-        <p>{{- site.description | escape -}}</p>
-
+        {%- include social.html -%}
       </div>
 
+      <div class="footer-col footer-col-3">
+        <p>{{- site.description | escape -}}</p>
+      </div>
     </div>
 
   </div>
