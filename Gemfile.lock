@@ -250,6 +250,7 @@ DEPENDENCIES
   jekyll-compose
   jekyll-feed (~> 0.12)
   jekyll-paginate
+  jekyll-readme-index
   jekyll-seo
   jemoji
   minima (~> 2.5)

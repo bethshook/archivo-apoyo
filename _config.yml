@@ -43,6 +43,7 @@ plugins:
   - jekyll-paginate
   - jemoji
   - jekyll-seo
+  - jekyll-readme-index
 
 # Exclude from processing.
 # The following items will not be processed, by default.
