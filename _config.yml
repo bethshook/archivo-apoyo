@@ -27,7 +27,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   crisis in Mexico City.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter: bethshook
+twitter:
   username: bethshook
   card: summary
 github_username:  bethshook
