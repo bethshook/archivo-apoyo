@@ -56,12 +56,12 @@
         </svg>
         <span class="username">{{ mst.username|escape }}</span></a></li>
     {%- endif -%}{%- endfor -%}
-    {%- if site.twitter_username -%}
+    {%- if site.twitter.username -%}
     <li>
         <svg class="svg-icon">
             <use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use>
         </svg>
-        <a href="https://www.twitter.com/{{ site.twitter_username| cgi_escape | escape }}">
+        <a href="https://www.twitter.com/{{ site.twitter.username| cgi_escape | escape }}">
         <span class="username">twitter</span></a></li>
     {%- endif -%}
     {%- if site.youtube_username -%}
