@@ -21,10 +21,12 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
 
 // New theme colors.
 $white: #fff;
-$brand-darkgreen: #9CC2A1;
-$brand-green: #D3FBD8;
+$brand-darker: #008F99;
+$brand-dark: #00C6CF;
+$brand-light: #E6F4F1;
 $icon: #d55672;
-$highlight: #E4E9FF;
+$highlight: #E6F4F1;
+$error: #EA0040;
 
 $table-text-align: left !default;
 
@@ -55,5 +57,7 @@ $on-laptop:        800px !default;
 @import
   "minima/base",
   "minima/layout",
+  "minima/links",
+  "minima/site-nav",
   "minima/syntax-highlighting"
 ;
