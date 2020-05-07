@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
 
   &.left {
     justify-content: start;
@@ -194,6 +195,7 @@
 
     @include media-query($on-palm) {
       width: auto;
+      margin-bottom: $spacing-unit;
       border-left: none;
       padding-left: 0;
     }
@@ -221,6 +223,19 @@
         margin-top: $spacing-unit / 2;
       }
     }
+  }
+}
+
+.mobile-anchor {
+  top: 60px;
+}
+
+.mobile-anchor-link {
+  display: none;
+
+  @include media-query($on-palm) {
+    display: block;
+    margin-bottom: $spacing-unit;
   }
 }
 
