@@ -27,7 +27,7 @@
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
-    background-color: $background-color;
+    background-color: transparent;
     text-align: right;
 
     label[for="nav-trigger"] {
@@ -53,24 +53,40 @@
       }
     }
 
+    .trigger {
+      background-color: $brand-dark;
+      text-align: right;
+      width: 50%;
+    }
+
     input ~ .trigger {
       clear: both;
-      display: none;
+      position: fixed;
+      top: 60px;
+      right: -100%;
+      transition: right .3s ease-out;
     }
 
     input:checked ~ .trigger {
-      display: block;
-      padding-bottom: 5px;
+      position: fixed;
+      top: 60px;
+      right: 0;
+      transition: right .3s ease;
     }
 
     .page-link {
       display: block;
-      padding: 5px 10px;
+      margin: 0;
+      padding: 20px;
+      @include relative-font-size(1.1);
+
+      &:nth-child(odd) {
+        background-color: $brand-darker;
+      }
 
       &:not(:last-child) {
         margin-right: 0;
       }
-      margin-left: 20px;
     }
   }
 }

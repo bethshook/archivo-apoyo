@@ -32,7 +32,7 @@
  * Site header
  */
 .site-header {
-  min-height: $spacing-unit * 1.865;
+  min-height: $spacing-unit * 2;
   background-color: $brand-dark;
   position: fixed;
   width: 100%;
@@ -51,7 +51,7 @@
   text-transform: lowercase;
 
   @include media-query($on-palm) {
-    @include relative-font-size(1.5);
+    @include relative-font-size(1.2);
   }
 
   &:hover {
@@ -159,8 +159,13 @@
 @include media-query($on-palm) {
   .footer-col {
     float: none;
+    text-align: center;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
     width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+
+  .footer-col-2 {
+    display: none;
   }
 }
 
@@ -172,6 +177,10 @@
 .page-content {
   padding: $spacing-unit * 5 0 $spacing-unit * 2 0;
   flex: 1;
+
+  @include media-query($on-palm) {
+    padding-top: $spacing-unit * 4;
+  }
 }
 
 .page-heading {
