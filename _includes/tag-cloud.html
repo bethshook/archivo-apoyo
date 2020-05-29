@@ -1,22 +1,26 @@
-<h2 class="flex-container">Browse by tag</h2>
-
-<div class="tag-cloud flex-container left">
+<div class="relative">
 
     <a id="tag-cloud" class="mobile-anchor"></a>
 
-    {% capture temptags %}
-        {% for tag in site.tags %}
-            {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+    <h2 class="flex-container">Browse by tag</h2>
+
+    <div class="tag-cloud flex-container left">
+
+        {% capture temptags %}
+            {% for tag in site.tags %}
+                {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+            {% endfor %}
+        {% endcapture %}
+        {% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
+        {% for temptag in sortedtemptags %}
+            {% assign tagitems = temptag | split: '#' %}
+            {% assign numposts = tagitems[2] %}
+            {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
+            <a class="tag-link" href="/tag/{{ tagname }}">
+                <div class="tag">{{ tagname }}</div><div class="number">{{ numposts }}</div>
+            </a>
         {% endfor %}
-    {% endcapture %}
-    {% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
-    {% for temptag in sortedtemptags %}
-        {% assign tagitems = temptag | split: '#' %}
-        {% assign numposts = tagitems[2] %}
-        {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
-        <a class="tag-link" href="/tag/{{ tagname }}">
-            <div class="tag">{{ tagname }}</div><div class="number">{{ numposts }}</div>
-        </a>
-    {% endfor %}
+
+    </div>
 
 </div>
