@@ -231,7 +231,7 @@
 }
 
 .post-list {
-  margin: 0 auto;
+  margin: 0 auto $spacing-unit * 3 0;
   list-style: none;
 
   > .post-item {

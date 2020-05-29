@@ -26,13 +26,14 @@ title: Home
 
   {%- endif -%}
 
+  {% if paginator.total_pages > 1 %}
   <!-- Pagination links -->
+
   <div class="pagination">
     {% if paginator.previous_page %}
       <a href="{{ paginator.previous_page_path }}" class="previous">prev</a>
     {% endif %}
 
-    {% if paginator.total_pages > 1 %}
 
       {% for page in (1..paginator.total_pages) %}
         {% if page == paginator.page %}
@@ -44,12 +45,13 @@ title: Home
         {% endif %}
       {% endfor %}
 
-    {% endif %}
 
     {% if paginator.next_page %}
       <a href="{{ paginator.next_page_path }}" class="next">next</a>
     {% endif %}
   </div>
+
+  {% endif %}
 
   <!-- Tag cloud -->
   {% include tag-cloud.html %}

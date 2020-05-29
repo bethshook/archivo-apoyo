@@ -19,6 +19,7 @@ a {
   }
 
   &.mobile-anchor-link {
+    color: $brand-darker;
     display: none;
     @include relative-font-size(1.25);
 
@@ -120,5 +121,6 @@ a {
 }
 
 .mobile-anchor-link-wrapper {
-
+  display: flex;
+  justify-content: center;
 }
