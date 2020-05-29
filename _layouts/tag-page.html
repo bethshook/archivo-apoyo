@@ -19,25 +19,7 @@ layout: default
     {% if post.tags contains tagname %}
     <div class="post-item flex-container left">
 
-        <a class="link--no-underline" href="{{ post.url | relative_url }}">
-            <div class="image-wrapper--thumbnail" style="background-image: url('/{{ post.image }}')">
-            </div>
-        </a>
-
-        <div>
-
-            <div class="post-meta desktop-only">
-                {% include post-date.html %}
-            </div>
-
-            <div class="post-link-wrapper">
-                <a class="post-link" href="{{ post.url | relative_url }}">
-                    {{ post.title | escape }}
-                </a>
-                <p class="translation">{{ post.translation }}</p>
-            </div>
-
-        </div>
+        {% include post-item.html %}
 
     </div>
     {% endif %}
