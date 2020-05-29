@@ -17,7 +17,7 @@ layout: default
 <div class="post-list">
     {%- for post in site.posts -%}
     {% if post.tags contains tagname %}
-    <div class="post-item flex-container">
+    <div class="post-item flex-container left">
 
         <a class="link--no-underline" href="{{ post.url | relative_url }}">
             <div class="image-wrapper--thumbnail" style="background-image: url('/{{ post.image }}')">
@@ -42,5 +42,12 @@ layout: default
     </div>
     {% endif %}
     {%- endfor -%}
+
+    <div class="flex-container">
+        <a class="tag-link" href="/">
+            <div class="tag">All posts</div>
+        </a>
+    </div>
+
 </div>
 

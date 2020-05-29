@@ -45,7 +45,7 @@ layout: default
     {% for tag in page.tags %}
     {% capture tagname %}{{ tag }}{% endcapture %}
     <a class="tag-link" href="/tag/{{ tagname }}">
-      <div class="tag no-sibling">{{ tagname }}</div>
+      <div class="tag">{{ tagname }}</div>
     </a>
     {% endfor %}
   </div>
@@ -73,7 +73,9 @@ layout: default
   </div>
 
   <div class="flex-container">
-    <a class="link--return" href="/"><i class="fas fa-long-arrow-alt-left"></i> Volver</a>
+    <a class="tag-link" href="/">
+      <div class="tag">All posts</div>
+    </a>
   </div>
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>

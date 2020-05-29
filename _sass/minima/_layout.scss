@@ -227,16 +227,8 @@
 }
 
 .mobile-anchor {
-  top: 60px;
-}
-
-.mobile-anchor-link {
-  display: none;
-
-  @include media-query($on-palm) {
-    display: block;
-    margin-bottom: $spacing-unit;
-  }
+  top: -60px;
+  position: absolute;
 }
 
 .post-list-heading {
@@ -244,7 +236,7 @@
 }
 
 .post-list {
-  margin: 0 auto $spacing-unit * 2.5 auto;
+  margin: 0 auto;
   list-style: none;
 
   > .post-item {

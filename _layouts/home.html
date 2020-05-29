@@ -14,18 +14,43 @@ title: Home
   {{ content }}
 
   <a class="mobile-anchor-link" href="#tag-cloud">
-    <h3>Skip to tags</h3>
+    Skip to tags <i class="far fa-arrow-alt-circle-down"></i>
   </a>
 
+  <!-- Post list -->
   {%- if site.posts.size > 0 -%}
 
     {% include post-list.html %}
 
   {%- endif -%}
 
+  <!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">prev</a>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <a class="current" href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
+      {% elsif page == 1 %}
+        <a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
+      {% else %}
+        <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">next</a>
+    {% endif %}
+  </div>
+
+  <hr>
+
+  <!-- Tag cloud -->
   {% include tag-cloud.html %}
 
-  <div class="flex-container">
+  <div class="flex-container left">
     <i class="fas fa-rss"></i>
     <a href="/feed.xml">
       <span>subscribe via RSS</span>

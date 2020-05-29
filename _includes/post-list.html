@@ -1,9 +1,9 @@
 <div class="post-list">
-    {%- for post in site.posts -%}
+    {%- for post in paginator.posts -%}
     <div class="post-item flex-container">
 
         <a class="link--no-underline" href="{{ post.url | relative_url }}">
-            <div class="image-wrapper--thumbnail" style="background-image: url('{{ post.image }}')">
+            <div class="image-wrapper--thumbnail" style="background-image: url('/{{ post.image }}')">
             </div>
         </a>
 

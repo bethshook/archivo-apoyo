@@ -18,6 +18,21 @@ a {
     border-bottom: none;
   }
 
+  &.mobile-anchor-link {
+    display: none;
+    @include relative-font-size(1.25);
+
+    &:hover {
+      background-size: 0 0;
+    }
+
+    @include media-query($on-palm) {
+      display: flex;
+      align-items: center;
+      margin-bottom: $spacing-unit;
+    }
+  }
+
   &.link--return {
     margin-top: $spacing-unit;
     color: $brand-darker;
@@ -58,43 +73,22 @@ a {
     }
 
     .tag {
-      background-color: $brand-darker;
-      border-top-left-radius: .25em;
-      border-bottom-left-radius: .25em;
+      color: $brand-darker;
       border: 1px $brand-darker solid;
       box-sizing: border-box;
-      border-right: none;
-
-      &--return {
-        background-color: $brand-dark;
-
-        &:hover {
-          transform: none;
-        }
-      }
-
-      &.no-sibling {
-        border-radius: .25em;
-        border: none;
-      }
     }
 
     .number {
       color: $brand-darker;
       border: 1px $brand-darker solid;
       border-left: none;
-      border-top-right-radius: .25em;
-      border-bottom-right-radius: .25em;
       background-color: $white;
       line-height: 1;
     }
 
     &:hover {
       background-size: 0 0;
-    }
-
-    &:hover {
-      transform: scale(.95)
+      transform: translateY(-10%)
     }
   }
 }

@@ -90,3 +90,29 @@
     }
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: $spacing-unit * 2 0;
+
+  a {
+    margin: 0 $spacing-unit / 2;
+    color: $brand-darker;
+
+    &.current {
+      color: $white;
+      background-color: $brand-darker;
+      width: $spacing-unit;
+      height: $spacing-unit;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:hover {
+      background-size: 0 0;
+    }
+  }
+}
