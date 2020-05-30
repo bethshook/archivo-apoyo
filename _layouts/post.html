@@ -53,15 +53,22 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
 
+    {%- if page.ext_url -%}
+
+    Sitio web: <a href="{{ page.ext_url }}">{{ page.ext_url }}</a>
+
+    {% endif %}
+
       <div class="image-wrapper">
 
         {%- if page.ext_url -%}
 
-        <a href="{{page.ext_url}}" target="_blank">
+
+        <a href="{{ page.ext_url }}" target="_blank">
 
         {%- endif -%}
 
-        <img src="/{{page.image}}" title="{{post.title}}" alt="{{post.title}}" />
+        <img src="/{{ page.image }}" title="{{ post.title }}" alt="{{ post.title }}" />
 
         {%- if page.ext_url -%}
         </a>

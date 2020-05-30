@@ -5,7 +5,7 @@ translation: 'CDMX Mutual Aid: Neighbors for neighbors'
 image: 'assets/images/ayudamutua.jpeg'
 emoji: ':open_hands:'
 ext_url: 'https://cdmxayudamutua.org/'
-date: 2020-04-26 23:35 -0500
+date: 2020-05-03 23:35 -0500
 tags: apoyo-mutuo voluntarixs donde-donar proyectos-activos
 ---
 
