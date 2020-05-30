@@ -39,7 +39,7 @@ readme_index:
 
 # Build settings
 theme: minima
-paginate: 10
+paginate: 5s
 paginate_path: /page:num/
 plugins:
   - jekyll-feed
