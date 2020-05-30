@@ -4,7 +4,7 @@ title: Cupones para apoyar a los trajineros
 translation: Coupons to support the trajineros
 image: 'assets/images/trajineros.jpg'
 emoji: ':rowboat:'
-date: 2020-05-04 23:26 -0500
+date: 2020-05-01 23:26 -0500
 status: inactive
 tags: apoyo-mutuo cupones comprar
 ---
