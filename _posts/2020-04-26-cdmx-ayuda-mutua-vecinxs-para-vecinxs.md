@@ -2,7 +2,7 @@
 layout: post
 title: 'CDMX Ayuda Mutua: Vecinxs para vecinxs'
 translation: 'CDMX Mutual Aid: Neighbors for neighbors'
-image: 'assets/images/ayudamutua.png'
+image: 'assets/images/ayudamutua.jpeg'
 emoji: ':open_hands:'
 ext_url: 'https://cdmxayudamutua.org/'
 date: 2020-04-26 23:35 -0500
