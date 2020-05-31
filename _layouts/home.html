@@ -7,14 +7,22 @@ title: Home
   {%- if page.vis_title -%}
   <div class="page-heading--visual">
     <h1>{{ page.vis_title }}</h1>
-    <p>{{ page.vis_subtitle }}</p>
+    <p>
+      {{ page.vis_subtitle }}
+      <br />
+      <div class="anchor-link-wrapper desktop-only">
+        <a class="anchor-link desktop-only" href="#tag-cloud">
+          Skip to tags <i class="far fa-arrow-alt-circle-down"></i>
+        </a>
+      </div>
+    </p>
   </div>
   {%- endif -%}
 
   {{ content }}
 
-  <div class="mobile-anchor-link-wrapper">
-    <a class="mobile-anchor-link" href="#tag-cloud">
+  <div class="anchor-link-wrapper mobile-only">
+    <a class="anchor-link mobile-only" href="#tag-cloud">
       Skip to tags <i class="far fa-arrow-alt-circle-down"></i>
     </a>
   </div>
