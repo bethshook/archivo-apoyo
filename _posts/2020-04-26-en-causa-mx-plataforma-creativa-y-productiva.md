@@ -6,7 +6,7 @@ image: 'assets/images/encausa.png'
 emoji: ':sake:'
 ext_url: 'https://www.en-causa.mx/'
 date: 2020-04-26 23:57 -0500
-tags: comprar consume-local arte proyectos-activos
+tags: donde-comprar consume-local arte proyectos-activos
 ---
 
 [En-causa.mx]({{page.ext_url}}) nació mientras [La Metropolitana](https://lametropolitana.com/), un estudio de diseño ubicado en la Doctores, buscaba una manera de apoyar a sus trabajadores y su comunidad. Decidieron convertir su espacio en "un albergue temporal y seguro para que un grupo importante de sus trabajadores pueda habitar y permanecer trabajando sin exponerse al contagio."

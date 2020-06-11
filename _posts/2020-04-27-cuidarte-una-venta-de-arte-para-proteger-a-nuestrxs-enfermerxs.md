@@ -6,7 +6,7 @@ image: 'assets/images/cuidarte.png'
 emoji: ':art:'
 ext_url: 'https://instagram.com/cuidarte_cdmx'
 date: 2020-04-27 19:27 -0500
-tags: arte apoyo-mutuo comprar proyectos-activos
+tags: arte apoyo-mutuo donde-comprar proyectos-activos
 ---
 
 Cuando compras una obra de arte de [esta cuenta de Instagram]({{page.ext_url}}), 100% de la venta se utilizará para comprar equipo de protección para enfermerxs y personal de limpieza de hospitales.
