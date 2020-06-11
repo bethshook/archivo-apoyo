@@ -190,7 +190,7 @@
 
     @include media-query($on-palm) {
       width: auto;
-      margin-bottom: $spacing-unit;
+      margin-bottom: $spacing-unit * 2;
       border-left: none;
       padding-left: 0;
     }
