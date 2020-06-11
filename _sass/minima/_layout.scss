@@ -332,7 +332,8 @@
     margin: 0 $spacing-unit * 2 0 0;
     width: 120px;
     height: 120px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
 
     @include media-query($on-palm) {
