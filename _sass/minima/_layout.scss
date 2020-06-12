@@ -213,7 +213,7 @@ img.flex-container {
       @include relative-font-size(2.2);
     }
 
-    @include media-query($on-palm) {
+    @include media-query($on-laptop) {
       margin: 0 0 $spacing-unit 0;
       width: auto;
       border-left: none;
