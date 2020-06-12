@@ -30,7 +30,6 @@ a {
 
     &.desktop-only {
       margin-bottom: 0;
-      margin-top: $spacing-unit;
       @include relative-font-size(1)
     }
 
@@ -59,7 +58,7 @@ a {
     font-family: $secondary-font-family;
 
     &:hover {
-      border-bottom: 1px $white solid;
+      border-bottom: 2px $brand-darker solid;
       background-size: 0 0;
     }
   }

@@ -6,16 +6,17 @@ title: Home
 <div class="home">
   {%- if page.vis_title -%}
   <div class="page-heading--visual">
-    <h1>{{ page.vis_title }}</h1>
-    <p>
-      {{ page.vis_subtitle }}
-      <br />
-      <div class="anchor-link-wrapper desktop-only">
-        <a class="anchor-link desktop-only" href="#tag-cloud">
-          Skip to tags <i class="far fa-arrow-alt-circle-down"></i>
-        </a>
-      </div>
-    </p>
+    <div>
+      <h2>{{ page.vis_title }}</h2>
+      <p>
+        {{ page.vis_subtitle }}
+      </p>
+    </div>
+    <div class="anchor-link-wrapper desktop-only">
+      <a class="anchor-link desktop-only" href="#tag-cloud">
+        Skip to tags <i class="far fa-arrow-alt-circle-down"></i>
+      </a>
+    </div>
   </div>
   {%- endif -%}
 
