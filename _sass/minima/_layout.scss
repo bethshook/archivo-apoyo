@@ -50,6 +50,10 @@
     font-weight: 300;
     line-height: $base-line-height * $base-font-size * 2.25;
     letter-spacing: -1px;
+
+    @include media-query($on-palm) {
+      @include relative-font-size(1.2);
+    }
   }
 
   @include media-query($on-palm) {
@@ -62,6 +66,11 @@
 
   img {
     margin-right: $spacing-unit / 2;
+    max-width: 80px;
+
+    @include media-query($on-palm) {
+      max-width: 60px;
+    }
   }
 }
 
@@ -194,23 +203,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: $spacing-unit * 3;
-    //padding: $spacing-unit;
-    //border-left: $spacing-unit / 3 solid $highlight;
+    margin: 0 -10% $spacing-unit * 3 -10%;
 
     h2 {
-      @include relative-font-size(2);
+      @include relative-font-size(2.2);
     }
 
     @include media-query($on-palm) {
+      margin: 0 0 $spacing-unit 0;
       width: auto;
-      margin-bottom: $spacing-unit * 2;
       border-left: none;
       padding-left: 0;
     }
 
     div:first-child {
-      width: 66%;
+      width: 55%;
+
+      @include media-query($on-palm) {
+        width: 100%;
+      }
     }
 
     h1 {
@@ -249,7 +260,7 @@
 }
 
 .post-list {
-  margin: 0 auto $spacing-unit * 3 0;
+  margin: 0 auto $spacing-unit * 2 0;
   list-style: none;
 
   > .post-item {
@@ -350,6 +361,7 @@
     margin: 0 $spacing-unit * 2 0 0;
     width: 120px;
     height: 120px;
+    background-color: white;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

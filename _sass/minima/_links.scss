@@ -24,8 +24,16 @@ a {
     color: $brand-darker;
     @include relative-font-size(1.25);
 
+    i {
+      transition: all .3s ease-out;
+    }
+
     &:hover {
       background-size: 0 0;
+
+      i {
+        transform: translateY(5px);
+      }
     }
 
     &.desktop-only {
@@ -35,7 +43,7 @@ a {
 
     @include media-query($on-palm) {
       align-items: center;
-      margin-bottom: $spacing-unit * 1.5;
+      margin-bottom: $spacing-unit * 2.5;
     }
   }
 
@@ -54,11 +62,10 @@ a {
   }
 
   &.page-link {
-    transition: none;
     font-family: $secondary-font-family;
 
     &:hover {
-      border-bottom: 2px $brand-darker solid;
+      color: black;
       background-size: 0 0;
     }
   }
@@ -94,7 +101,8 @@ a {
 
     &:hover {
       background-size: 0 0;
-      transform: translateY(-10%)
+      background-color: $brand-light;
+      //transform: translateY(-10%)
     }
   }
 }
