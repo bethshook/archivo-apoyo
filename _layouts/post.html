@@ -59,6 +59,8 @@ layout: default
 
     {% endif %}
 
+    {% unless page.image contains "aa-logotipo" %}
+
       <div class="image-wrapper">
 
         {%- if page.ext_url -%}
@@ -73,9 +75,11 @@ layout: default
         {%- if page.ext_url -%}
         </a>
 
-        {%- endif -%}
+        {% endif %}
 
       </div>
+
+    {% endunless %}
 
   </div>
 
